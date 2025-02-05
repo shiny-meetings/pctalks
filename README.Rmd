@@ -1,0 +1,101 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+  knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    fig.path = "man/figures/README-",
+    out.width = "100%"
+)
+```
+
+# `{pctalks}`
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+## Project Description
+
+
+
+### Required Features
+
+
+## Existing Work
+
+
+
+## Deliverables
+
+**Start date: 2025-02-05**
+**End date:   2025-02-19**
+
+- Day 1 and 2:
+  - [ ] Initial wireframing. You may use AI tools such as [tldraw](https://www.tldraw.com/), [shiny assistant](https://gallery.shinyapps.io/assistant/#) or [ploomber AI editor](https://editor.ploomber.io/)
+  - Framework to use:
+    - [ ] shiny only
+    - [x] [golem](https://github.com/ThinkR-open/golem)
+    - [ ] [rhino](https://github.com/Appsilon/rhino)
+    - [ ] shiny + [ambiorix](https://ambiorix.dev/)
+- Day 3:
+  - [ ] First meeting for discussing UI and features
+- Day 12:
+  - [ ] Second meeting for discussing deployment
+- Day 15 or before:
+  - [ ] Deployment
+
+
+## How to Contribute
+
+- Fork this repository
+- Create a new branch for your feature
+- Make your changes
+- Submit a pull request
+- Wait for review and address any feedback
+
+
+
+## Installation
+
+You can install the development version of `{pctalks}` like so:
+
+```{r}
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```
+
+## Run
+
+You can launch the application by running:
+
+```{r, eval = FALSE}
+pctalks::run_app()
+```
+
+## About
+
+You are reading the doc about version : `r golem::pkg_version()`
+
+This README has been compiled on the
+
+```{r}
+Sys.time()
+```
+
+Here are the tests results and package coverage:
+
+```{r, error = TRUE}
+devtools::check(quiet = TRUE)
+```
+
+```{r echo = FALSE}
+unloadNamespace("pctalks")
+```
+
+```{r, error = TRUE}
+covr::package_coverage()
+```
