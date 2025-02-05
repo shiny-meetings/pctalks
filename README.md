@@ -15,9 +15,13 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 ## Existing Work
 
+PositConf 2024 talks platform used green colors and cards as shown in
+[this video](https://youtube.com/shorts/rAfBnkZOCxI?feature=share).
+
 ## Deliverables
 
-**Start date: 2025-02-05** **End date: 2025-02-19**
+**Start date: 2025-02-05**  
+**End date: 2025-02-19**
 
 - Day 1 and 2:
   - [ ] Initial wireframing. You may use AI tools such as
@@ -68,7 +72,7 @@ This README has been compiled on the
 
 ``` r
 Sys.time()
-#> [1] "2025-02-04 20:28:26 EST"
+#> [1] "2025-02-04 21:59:42 EST"
 ```
 
 Here are the tests results and package coverage:
@@ -79,7 +83,7 @@ devtools::check(quiet = TRUE)
 #> ℹ Installed roxygen2 version (7.3.2) doesn't match required (7.1.1)
 #> ✖ `check()` will not re-document this package
 #> ── R CMD check results ───────────────────────────────── pctalks 0.0.0.9000 ────
-#> Duration: 31.8s
+#> Duration: 33.3s
 #> 
 #> 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 ```

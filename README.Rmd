@@ -28,11 +28,13 @@ output: github_document
 
 ## Existing Work
 
+PositConf 2024 talks platform used green colors and cards as shown in [this video](https://youtube.com/shorts/rAfBnkZOCxI?feature=share).
+
 
 
 ## Deliverables
 
-**Start date: 2025-02-05**
+**Start date: 2025-02-05**  
 **End date:   2025-02-19**
 
 - Day 1 and 2:
