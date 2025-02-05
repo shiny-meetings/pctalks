@@ -40,6 +40,13 @@ PositConf 2024 talks platform used green colors and cards as shown in
 - Day 15 or before:
   - [ ] Deployment
 
+## Meetings
+
+Projects start on Wednesdays with meetings on Fridays. We have a shiny
+club channel on the [DSLC
+Slack](https://dslcio.slack.com/archives/C08A52V98TY) for chatting. Zoom
+link appears 10 minutes before meeting on Fridays in the slack channel.
+
 ## How to Contribute
 
 - Fork this repository
@@ -72,7 +79,7 @@ This README has been compiled on the
 
 ``` r
 Sys.time()
-#> [1] "2025-02-04 21:59:42 EST"
+#> [1] "2025-02-05 07:34:03 EST"
 ```
 
 Here are the tests results and package coverage:
@@ -83,7 +90,7 @@ devtools::check(quiet = TRUE)
 #> ℹ Installed roxygen2 version (7.3.2) doesn't match required (7.1.1)
 #> ✖ `check()` will not re-document this package
 #> ── R CMD check results ───────────────────────────────── pctalks 0.0.0.9000 ────
-#> Duration: 33.3s
+#> Duration: 33.4s
 #> 
 #> 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 ```

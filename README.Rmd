@@ -52,6 +52,10 @@ PositConf 2024 talks platform used green colors and cards as shown in [this vide
   - [ ] Deployment
 
 
+## Meetings
+
+Projects start on Wednesdays with meetings on Fridays. We have a shiny club channel on the [DSLC Slack](https://dslcio.slack.com/archives/C08A52V98TY) for chatting. Zoom link appears 10 minutes before meeting on Fridays in the slack channel.
+
 ## How to Contribute
 
 - Fork this repository
