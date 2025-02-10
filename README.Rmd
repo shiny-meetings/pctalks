@@ -105,3 +105,16 @@ unloadNamespace("pctalks")
 ```{r, error = TRUE}
 covr::package_coverage()
 ```
+
+
+---
+
+### Notes
+
+Required packages
+
+shiny
+tidyverse
+rollama
+httr2
+lsa
