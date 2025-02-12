@@ -11,7 +11,18 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 ## Project Description
 
+An app to explore and watch PositConf 2024 talks.
+
 ### Required Features
+
+- Card for individual talk that opens up the talk page containing:
+  - talk title  
+  - YouTube video  
+  - description  
+- Ability to filter talks based on:
+  - session type  
+  - session topics  
+  - speaker name, talk title & description
 
 ## Existing Work
 
@@ -34,8 +45,9 @@ PositConf 2024 talks platform used green colors and cards as shown in
     - [ ] [rhino](https://github.com/Appsilon/rhino)
     - [ ] shiny + [ambiorix](https://ambiorix.dev/)
 - Day 3:
-  - [ ] First meeting for discussing UI and features
-- Day 12:
+  - \[x \] First meeting for discussing UI and features ([meeting
+    recording](https://youtu.be/EeYsaBg3gO0?si=L0fRWqrpi4Hf-nI3))
+- Day 10:
   - [ ] Second meeting for discussing deployment
 - Day 15 or before:
   - [ ] Deployment
@@ -79,26 +91,26 @@ This README has been compiled on the
 
 ``` r
 Sys.time()
-#> [1] "2025-02-05 07:34:03 EST"
+#> [1] "2025-02-12 01:22:47 EST"
 ```
 
 Here are the tests results and package coverage:
 
 ``` r
 devtools::check(quiet = TRUE)
-#> ══ Documenting ═════════════════════════════════════════════════════════════════
-#> ℹ Installed roxygen2 version (7.3.2) doesn't match required (7.1.1)
-#> ✖ `check()` will not re-document this package
+#> ℹ Loading pctalks
 #> ── R CMD check results ───────────────────────────────── pctalks 0.0.0.9000 ────
-#> Duration: 33.4s
+#> Duration: 1m 8.7s
 #> 
 #> 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 ```
 
 ``` r
 covr::package_coverage()
-#> pctalks Coverage: 68.57%
+#> pctalks Coverage: 41.03%
+#> R/global.R: 0.00%
 #> R/run_app.R: 0.00%
+#> R/app_server.R: 66.67%
 #> R/app_config.R: 100.00%
 #> R/app_ui.R: 100.00%
 ```
