@@ -2,6 +2,7 @@ library(RSelenium)
 library(wdman)
 library(rvest)
 library(tidyr)
+library(dplyr)
 
 # Function to scrape the data for a given URL
 scrape_data <- function(url) {
@@ -100,19 +101,37 @@ all_data <- lapply(urls, scrape_data)
 # Combine all data into one data frame
 combined_data <- do.call(rbind, all_data)
 
-readr::write_csv(combined_data, file = here::here("dev/data/scraped_session_data.csv"))
-
 conf2024 <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-01-14/conf2024.csv') |>
   janitor::clean_names()
 
 
 combined_data <- combined_data |>
- fuzzyjoin::stringdist_full_join(conf2024 |>
-                                   dplyr::mutate(talk_title = sub(" -.*", "", talk_title)),
-                                 by = "talk_title",
-                                 max_dist = 5,
-                                 method = "lv",
-                                 ignore_case = TRUE)
+  fuzzyjoin::stringdist_full_join(conf2024 |>
+                                    dplyr::mutate(talk_title = sub(" -.*", "", talk_title)),
+                                  by = "talk_title",
+                                  max_dist = 5,
+                                  method = "lv",
+                                  ignore_case = TRUE)
 
-readr::write_csv(combined_data, file = here::here("dev/data/joined_data.csv"))
 
+
+combined_data <- combined_data |>
+  mutate(
+    session_type = case_when(
+      is.na(session_type) ~ track,
+      .default = session_type
+    )
+  ) |>
+  drop_na(talk_title.y) |>
+  select(-talk_title.x) |>
+  rename(talk_title = talk_title.y)
+
+combined_data <- combined_data |>
+  distinct(talk_title) |>
+  mutate(page_value = paste0("page", row_number())) |>
+  right_join(combined_data, by = "talk_title")
+
+
+
+usethis::use_data(combined_data, internal = TRUE)
+# usethis::use_data(combined_data, overwrite = TRUE)
