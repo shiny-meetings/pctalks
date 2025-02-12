@@ -21,9 +21,18 @@ output: github_document
 
 ## Project Description
 
+An app to explore and watch PositConf 2024 talks.
 
+### Required Features 
 
-### Required Features
+* Card for individual talk that opens up the talk page containing:  
+  - talk title  
+  - YouTube video  
+  - description  
+* Ability to filter talks based on:
+  - session type  
+  - session topics  
+  - speaker name, talk title & description  
 
 
 ## Existing Work
@@ -45,8 +54,8 @@ PositConf 2024 talks platform used green colors and cards as shown in [this vide
     - [ ] [rhino](https://github.com/Appsilon/rhino)
     - [ ] shiny + [ambiorix](https://ambiorix.dev/)
 - Day 3:
-  - [ ] First meeting for discussing UI and features
-- Day 12:
+  - [x ] First meeting for discussing UI and features ([meeting recording](https://youtu.be/EeYsaBg3gO0?si=L0fRWqrpi4Hf-nI3))
+- Day 10:
   - [ ] Second meeting for discussing deployment
 - Day 15 or before:
   - [ ] Deployment
