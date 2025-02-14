@@ -131,7 +131,15 @@ combined_data <- combined_data |>
   mutate(page_value = paste0("page", row_number())) |>
   right_join(combined_data, by = "talk_title")
 
+combined_data_collapsed <- combined_data |>
+  dplyr::group_by(talk_title) |>
+  dplyr::mutate(session_topics = paste(session_topics, collapse = ", ")) |>
+  dplyr::ungroup() |>
+  dplyr::distinct() |>
+  dplyr::mutate(video_id = sub("https://youtu.be/", "", yt_url)) |>
+  tidyr::drop_na(yt_url)
 
 
-usethis::use_data(combined_data, internal = TRUE)
-# usethis::use_data(combined_data, overwrite = TRUE)
+
+# usethis::use_data(combined_data, internal = TRUE)
+usethis::use_data(combined_data_collapsed, overwrite = TRUE)

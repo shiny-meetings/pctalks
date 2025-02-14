@@ -5,7 +5,27 @@
 #' @import shiny
 #' @noRd
 app_server <- function(input, output, session) {
-  observeEvent(input$go_to_page, {
-    bslib::nav_select("app_page", selected = "page1", session = session)
-  })
+
+  lapply(
+    combined_data_collapsed$page_value,
+    \(page){
+      observeEvent(input[[page]], {
+        bslib::nav_select("app_page", selected = page, session = session)
+      })
+    }
+  )
+
+  lapply(
+    combined_data_collapsed$page_value,
+    \(page){
+      observeEvent(input[[paste0("back_to_session_", page)]], {
+        bslib::nav_select("app_page", selected = "Home", session = session)
+      })
+    }
+  )
+
+
+
+
+
 }

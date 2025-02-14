@@ -1,8 +1,8 @@
 #' Conference Data
 #'
 #'
-#' @format ## `combined_data`
-#' A data frame with 204 rows and 8 columns:
+#' @format ## `combined_data_collapsed`
+#' A data frame with 105 rows and 9 columns:
 #' \describe{
 #'   \item{talk_title}{Title}
 #'   \item{page_value}{Value for page panel}
@@ -12,6 +12,7 @@
 #'   \item{track}{Track}
 #'   \item{description}{Description}
 #'   \item{yt_url}{YouTube Video URL}
+#'   \item{video_id}{YouTube Video URL}
 #' }
 #' @source <https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-01-14/conf2024.csv>
-"combined_data"
+"combined_data_collapsed"

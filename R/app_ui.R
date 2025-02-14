@@ -15,8 +15,11 @@ app_ui <- function(request) {
       id = "app_page",
       nav_panel(
         "Home",
-        "This is homepage",
-        bslib::input_task_button("go_to_page", "Visit Page")
+        # bslib::input_task_button("go_to_page", "Visit Page")
+        page_sidebar(
+          sidebar = sidebar,
+          all_talks
+        )
       ),
       !!! all_hidden_pages
     )
