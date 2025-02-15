@@ -10,6 +10,7 @@ Imports:
     config,
     dplyr,
     golem,
+    pkgload,
     rlang,
     shiny,
     tidyr

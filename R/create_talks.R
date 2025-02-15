@@ -12,6 +12,7 @@ create_talk_page <- function(page_data){
       bslib::card(
         min_height = "1200px",
         bslib::card_header(
+          # class = "posit_header",
           shiny::actionLink(paste0("back_to_session_", page_data$page_value),
                             "Back to Session Catalog",
                             icon = shiny::icon("arrow-left"))
@@ -72,9 +73,10 @@ create_speaker_conditions <- \(speaker) {
 
 
 #' Create talk card
-#'
+#' @param talk_title talk title
 #' @param speaker speaker name
 #' @param topics session topics
+#' @param page_value page ID
 #'
 #' @returns conditional panel
 #' @export
@@ -92,21 +94,25 @@ create_talk_card <- \(talk_title, speaker, topics, page_value) {
   # )
 
   bslib_card <- bslib::card(
-    min_height = "200px",
+    height = "200px",
     bslib::card_header(
-      tags$h4(talk_title)
+      class = "posit_header",
+      style = "height: 60px; overflow: hidden;",
+      tags$h5(talk_title, style = "white-space: nowrap; overflow: hidden; text-overflow: ellipsis;")
     ),
     bslib::card_body(
-      tags$h6(speaker),
+      style = "display: flex; flex-direction: column; justify-content: space-between;",
+      tags$h6(speaker, style = "white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"),
       actionButton(
         inputId = page_value,
-        label = "REPLAY SESSION"
+        label = "REPLAY SESSION"#,
+        # class = "btn-secondary"
       )
     )
   )
 
   col <- tags$div(
-    class = "col-12 col-md-4",
+    class = "col-12 col-md-4 p-2",
     bslib_card #card
   )
 

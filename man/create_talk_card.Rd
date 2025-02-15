@@ -7,9 +7,13 @@
 create_talk_card(talk_title, speaker, topics, page_value)
 }
 \arguments{
+\item{talk_title}{talk title}
+
 \item{speaker}{speaker name}
 
 \item{topics}{session topics}
+
+\item{page_value}{page ID}
 }
 \value{
 conditional panel
