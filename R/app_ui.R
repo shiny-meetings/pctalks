@@ -3,14 +3,45 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @import bslib
+#' @import rlang
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      golem::golem_welcome_page() # Remove this line to start building your UI
+    page_navbar(
+      id = "app_page",
+      theme = bs_theme(
+        fg =  "black", #"#419599", #"#72994E",
+        bg = "white",
+        primary = "#72994E",
+        secondary = "#419599"
+      ) |>
+        bs_add_rules("
+      .posit_header {
+         background-color: #72994E !important;
+         color: white;
+       }
+    "),
+      nav_panel(
+        title = tags$span(
+          tags$img(
+            src = "www/logo.png",
+            width = "150px",
+            height = "auto",
+            class = "me-3",
+            alt = "Posit Conf 2024"
+          )
+        ),
+        value = "Home",
+        page_sidebar(
+          sidebar = sidebar,
+          all_talks
+        )
+      ),
+      !!! all_hidden_pages
     )
   )
 }
