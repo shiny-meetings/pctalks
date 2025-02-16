@@ -1252,13 +1252,6 @@
       ],
       "Hash": "9de96463d2117f6ac49980577939dfb3"
     },
-    "rematch": {
-      "Package": "rematch",
-      "Version": "2.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "cbff1b666c6fa6d21202f07e2318d4f1"
-    },
     "remotes": {
       "Package": "remotes",
       "Version": "2.5.0",
@@ -1292,32 +1285,6 @@
         "lazyeval"
       ],
       "Hash": "ae34cd56890607370665bee5bd17812f"
-    },
-    "rhub": {
-      "Package": "rhub",
-      "Version": "2.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "callr",
-        "cli",
-        "curl",
-        "desc",
-        "gert",
-        "gitcreds",
-        "glue",
-        "jsonlite",
-        "pkgbuild",
-        "processx",
-        "rappdirs",
-        "rematch",
-        "rprojroot",
-        "utils",
-        "whoami"
-      ],
-      "Hash": "403efdc0d221efb38e2eccdfdc5f4b25"
     },
     "rlang": {
       "Package": "rlang",
@@ -1911,18 +1878,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "c6abfa47a46d281a7d5159d0a8891e88"
-    },
-    "whoami": {
-      "Package": "whoami",
-      "Version": "1.3.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "httr",
-        "jsonlite",
-        "utils"
-      ],
-      "Hash": "ef0f4d9b8f2cc2ebeccae1d725b8a023"
     },
     "withr": {
       "Package": "withr",
