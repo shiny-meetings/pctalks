@@ -66,6 +66,7 @@ create_topic_conditions <- \(topics) {
 #' @returns string that contains javascript code for search term conditions
 #' @export
 create_speaker_conditions <- \(speaker) {
+  speaker <- gsub(pattern = "'", replacement = "\\\\'", x = speaker)
   paste0("(input.search_term.length === 0 || '",
          tolower(speaker), "'.includes(input.search_term.toLowerCase()))")
 }
