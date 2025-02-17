@@ -1,0 +1,12 @@
+name: pctalks
+title: pctalks
+username: umair
+account: umair
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14007021
+bundleId: 9809422
+url: https://umair.shinyapps.io/pctalks/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

@@ -78,10 +78,11 @@ create_speaker_conditions <- \(speaker) {
 #' @param speaker speaker name
 #' @param topics session topics
 #' @param page_value page ID
+#' @param description talk description
 #'
 #' @returns conditional panel
 #' @export
-create_talk_card <- \(talk_title, speaker, topics, page_value) {
+create_talk_card <- \(talk_title, speaker, topics, page_value, description) {
   # topic_li <- lapply(topics, tags$li)
   # topic_ul <- tags$ul(topic_li)
 
@@ -95,15 +96,16 @@ create_talk_card <- \(talk_title, speaker, topics, page_value) {
   # )
 
   bslib_card <- bslib::card(
-    height = "200px",
+    height = "450px",
     bslib::card_header(
       class = "posit_header",
-      style = "height: 60px; overflow: hidden;",
-      tags$h5(talk_title, style = "white-space: nowrap; overflow: hidden; text-overflow: ellipsis;")
+      style = "height: 100px;",
+      tags$h5(talk_title)
     ),
     bslib::card_body(
       style = "display: flex; flex-direction: column; justify-content: space-between;",
-      tags$h6(speaker, style = "white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"),
+      tags$h6(tags$strong(speaker)),
+      tags$p(description, class = "truncate-description"),
       actionButton(
         inputId = page_value,
         label = "REPLAY SESSION"#,

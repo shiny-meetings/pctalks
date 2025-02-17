@@ -4,7 +4,7 @@
 \alias{create_talk_card}
 \title{Create talk card}
 \usage{
-create_talk_card(talk_title, speaker, topics, page_value)
+create_talk_card(talk_title, speaker, topics, page_value, description)
 }
 \arguments{
 \item{talk_title}{talk title}
@@ -14,6 +14,8 @@ create_talk_card(talk_title, speaker, topics, page_value)
 \item{topics}{session topics}
 
 \item{page_value}{page ID}
+
+\item{description}{talk description}
 }
 \value{
 conditional panel

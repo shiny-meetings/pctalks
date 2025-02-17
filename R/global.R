@@ -15,13 +15,26 @@ all_hidden_pages <- lapply(
 
 
 speakers <- combined_data_collapsed$speaker_name
+combined_data_collapsed <- combined_data_collapsed |>
+  dplyr::mutate(
+    session_topics = dplyr::case_when(
+      session_topics == "NA" ~ "Keynote & Lightning Talks",
+      .default = session_topics
+    ),
+    description = dplyr::case_when(
+      is.na(description) ~ "No Description",
+      .default = description
+    )
+  )
 topics <- lapply(combined_data_collapsed$session_topics, \(string){
   unlist(strsplit(string, ",\\s*"))
 })
+
 page_value <- combined_data_collapsed$page_value
 talk_title <- combined_data_collapsed$talk_title
+description <- combined_data_collapsed$description
 
-all_cards <- Map(f = create_talk_card, talk_title, speakers, topics, page_value)
+all_cards <- Map(f = create_talk_card, talk_title, speakers, topics, page_value, description)
 
 
 all_talks <- tags$div(

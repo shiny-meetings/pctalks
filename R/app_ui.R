@@ -13,6 +13,7 @@ app_ui <- function(request) {
     # Your application UI logic
     page_navbar(
       id = "app_page",
+      header = app_banner,
       theme = bs_theme(
         fg =  "black", #"#419599", #"#72994E",
         bg = "white",
@@ -23,7 +24,15 @@ app_ui <- function(request) {
       .posit_header {
          background-color: #72994E !important;
          color: white;
-       }
+      }
+      .truncate-description {
+        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+      }
     "),
       nav_panel(
         title = tags$span(

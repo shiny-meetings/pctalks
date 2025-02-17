@@ -10,11 +10,11 @@ Imports:
     config,
     dplyr,
     golem,
-    pkgload,
     rlang,
     shiny,
     tidyr
 Suggests: 
+    pkgload,
     spelling,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
