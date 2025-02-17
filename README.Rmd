@@ -54,11 +54,11 @@ PositConf 2024 talks platform used green colors and cards as shown in [this vide
     - [ ] [rhino](https://github.com/Appsilon/rhino)
     - [ ] shiny + [ambiorix](https://ambiorix.dev/)
 - Day 3:
-  - [x ] First meeting for discussing UI and features ([meeting recording](https://youtu.be/EeYsaBg3gO0?si=L0fRWqrpi4Hf-nI3))
+  - [x] First meeting for discussing UI and features ([meeting recording](https://youtu.be/EeYsaBg3gO0?si=L0fRWqrpi4Hf-nI3))
 - Day 10:
-  - [ ] Second meeting for discussing deployment
+  - [x] Second meeting for discussing deployment ([meeting recording](https://www.youtube.com/watch?v=O7hYqjLYwa8))
 - Day 15 or before:
-  - [ ] Deployment
+  - [x] Deployment: https://umair.shinyapps.io/pctalks/
 
 
 ## Meetings
@@ -80,7 +80,7 @@ Projects start on Wednesdays with meetings on Fridays. We have a shiny club chan
 You can install the development version of `{pctalks}` like so:
 
 ```{r}
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+remotes::install_github("shiny-meetings/pctalks")
 ```
 
 ## Run
@@ -114,16 +114,3 @@ unloadNamespace("pctalks")
 ```{r, error = TRUE}
 covr::package_coverage()
 ```
-
-
----
-
-### Notes
-
-Required packages
-
-shiny
-tidyverse
-rollama
-httr2
-lsa
