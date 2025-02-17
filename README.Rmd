@@ -79,7 +79,7 @@ Projects start on Wednesdays with meetings on Fridays. We have a shiny club chan
 
 You can install the development version of `{pctalks}` like so:
 
-```{r}
+```{r, eval=FALSE}
 remotes::install_github("shiny-meetings/pctalks")
 ```
 
